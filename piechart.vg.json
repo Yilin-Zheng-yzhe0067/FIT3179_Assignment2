@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Greenhouse Gas Categories",
+    "width": 200,
+    "height": 200,
+    "data": {
+        "url": "piechart.csv"
+    },
+    "params": [{ "name": "continent_highlight", "select": { "type": "point", "fields": ["Greenhouse Gas Categories"] }, "bind": "legend" }],
+    "mark": { "type": "arc", "tooltip": true, "innerRadius": 50 },
+    "encoding": {
+        "theta": { "field": "C02 Emission in 2019", "type": "quantitative", "stack": true },
+        "color": {
+            "field": "Greenhouse Gas Categories",
+            "type": "nominal",
+            "scale": {
+                "domain": [
+                    "Agriculture",
+                    "Energy",
+                    "Industrial Processes",
+                    "Waste"
+                ],
+                "range": [
+                    "#8dd3c7",
+                    "#386cb0",
+                    "#bebada",
+                    "#fb8072"
+                ]
+            }
+
+        },
+        "opacity": { "condition": { "param": "continent_highlight", "value": 0.8 }, "value": 0.2 },
+        "tooltip": [
+            { "field": "Greenhouse Gas Categories", "type": "nominal" },
+            { "field": "C02 Emission in 2019", "type": "quantitative" },
+            { "field": "Percentage of Total C02 Emission", "type": "nominal" }
+        ]
+    }
+}

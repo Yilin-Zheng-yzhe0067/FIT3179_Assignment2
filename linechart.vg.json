@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "PM2.5 vs Year",
+    "data": { "url": "pmvalue.csv" },
+    "width": 400,
+    "height": 200,
+    "mark": {
+        "type": "line",
+        "point": true
+    },
+    "params": [{ "name": "City_selection", "bind": { "input": "select", "options": [null, "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "labels": ["Show All", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "name": "City: " } }],
+    "transform": [{
+        "filter": "City_selection == null || datum.City == City_selection"
+    }],
+    "encoding": {
+        "x": { "field": "Year", "type": "nominal", "axis": { "labelAngle": 0 } },
+        "y": { "field": "pm", "type": "quantitative", "title": "PM2.5(µg/m^3)" },
+        "color": {
+            "field": "City",
+            "type": "nominal",
+            "scale": {
+                "domain": [
+                    "Adelaide",
+                    "Brisbane",
+                    "Canberra",
+                    "Darwin",
+                    "Hobart",
+                    "Melbourne",
+                    "Perth",
+                    "Sydney"
+                ],
+                "range": [
+                    "#1b9e77",
+                    "#d95f02",
+                    "#7570b3",
+                    "#e7298a",
+                    "#66a61e",
+                    "#e6ab02",
+                    "#a6761d",
+                    "#666666"
+                ]
+            }
+
+        }
+    }
+}
