@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Greenhouse Gas Categories",
-    "width": 200,
+    "width": 400,
     "height": 200,
     "data": {
-        "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/piechart.csv"
+        "url": "piechart.csv"
     },
     "params": [{ "name": "continent_highlight", "select": { "type": "point", "fields": ["Greenhouse Gas Categories"] }, "bind": "legend" }],
     "mark": { "type": "arc", "tooltip": true, "innerRadius": 50 },
