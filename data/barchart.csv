@@ -479,3 +479,123 @@
 1,Waste,NSW,2017,3943
 1,Waste,NSW,2018,4716
 1,Waste,NSW,2019,4789
+1,Agriculture,Australia,2005,85957
+1,Agriculture,Australia,2006,84264
+1,Agriculture,Australia,2007,80268
+1,Agriculture,Australia,2008,77541
+1,Agriculture,Australia,2009,77743
+1,Agriculture,Australia,2010,75094
+1,Agriculture,Australia,2011,79922
+1,Agriculture,Australia,2012,81435
+1,Agriculture,Australia,2013,81698
+1,Agriculture,Australia,2014,82018
+1,Agriculture,Australia,2015,78941
+1,Agriculture,Australia,2016,77869
+1,Agriculture,Australia,2017,81861
+1,Agriculture,Australia,2018,80601
+1,Agriculture,Australia,2019,74825
+1,Energy,Australia,2005,401717
+1,Energy,Australia,2006,407617
+1,Energy,Australia,2007,415696
+1,Energy,Australia,2008,421016
+1,Energy,Australia,2009,425727
+1,Energy,Australia,2010,420678
+1,Energy,Australia,2011,417557
+1,Energy,Australia,2012,423135
+1,Energy,Australia,2013,416380
+1,Energy,Australia,2014,410088
+1,Energy,Australia,2015,420797
+1,Energy,Australia,2016,430659
+1,Energy,Australia,2017,433168
+1,Energy,Australia,2018,434415
+1,Energy,Australia,2019,434009
+1,Industrial Processes,Australia,2005,31149
+1,Industrial Processes,Australia,2006,31037
+1,Industrial Processes,Australia,2007,33070
+1,Industrial Processes,Australia,2008,32532
+1,Industrial Processes,Australia,2009,30629
+1,Industrial Processes,Australia,2010,32865
+1,Industrial Processes,Australia,2011,33571
+1,Industrial Processes,Australia,2012,30500
+1,Industrial Processes,Australia,2013,28562
+1,Industrial Processes,Australia,2014,28406
+1,Industrial Processes,Australia,2015,29742
+1,Industrial Processes,Australia,2016,29509
+1,Industrial Processes,Australia,2017,29950
+1,Industrial Processes,Australia,2018,30702
+1,Industrial Processes,Australia,2019,31751
+1,Waste,Australia,2005,16012
+1,Waste,Australia,2006,15772
+1,Waste,Australia,2007,16149
+1,Waste,Australia,2008,16675
+1,Waste,Australia,2009,16578
+1,Waste,Australia,2010,16936
+1,Waste,Australia,2011,16216
+1,Waste,Australia,2012,14528
+1,Waste,Australia,2013,13843
+1,Waste,Australia,2014,13924
+1,Waste,Australia,2015,13354
+1,Waste,Australia,2016,13951
+1,Waste,Australia,2017,14064
+1,Waste,Australia,2018,13945
+1,Waste,Australia,2019,13777
+,Agriculture,Average,2005,19102
+,Agriculture,Average,2006,18725
+,Agriculture,Average,2007,17837
+,Agriculture,Average,2008,17231
+,Agriculture,Average,2009,17276
+,Agriculture,Average,2010,16687
+,Agriculture,Average,2011,17760
+,Agriculture,Average,2012,18097
+,Agriculture,Average,2013,18155
+,Agriculture,Average,2014,18226
+,Agriculture,Average,2015,17542
+,Agriculture,Average,2016,17304
+,Agriculture,Average,2017,18192
+,Agriculture,Average,2018,17911
+,Agriculture,Average,2019,16628
+,Energy,Average,2005,89200
+,Energy,Average,2006,90508
+,Energy,Average,2007,92284
+,Energy,Average,2008,93462
+,Energy,Average,2009,94511
+,Energy,Average,2010,93383
+,Energy,Average,2011,92687
+,Energy,Average,2012,93929
+,Energy,Average,2013,92423
+,Energy,Average,2014,91012
+,Energy,Average,2015,93401
+,Energy,Average,2016,95573
+,Energy,Average,2017,96152
+,Energy,Average,2018,96440
+,Energy,Average,2019,96354
+,Industrial Processes,Average,2005,6922
+,Industrial Processes,Average,2006,6897
+,Industrial Processes,Average,2007,7349
+,Industrial Processes,Average,2008,7229
+,Industrial Processes,Average,2009,6807
+,Industrial Processes,Average,2010,7303
+,Industrial Processes,Average,2011,7460
+,Industrial Processes,Average,2012,6777
+,Industrial Processes,Average,2013,6347
+,Industrial Processes,Average,2014,6312
+,Industrial Processes,Average,2015,6609
+,Industrial Processes,Average,2016,6557
+,Industrial Processes,Average,2017,6655
+,Industrial Processes,Average,2018,6822
+,Industrial Processes,Average,2019,7055
+,Waste,Average,2005,3558
+,Waste,Average,2006,3504
+,Waste,Average,2007,3588
+,Waste,Average,2008,3705
+,Waste,Average,2009,3684
+,Waste,Average,2010,3763
+,Waste,Average,2011,3603
+,Waste,Average,2012,3228
+,Waste,Average,2013,3076
+,Waste,Average,2014,3094
+,Waste,Average,2015,2967
+,Waste,Average,2016,3100
+,Waste,Average,2017,3125
+,Waste,Average,2018,3098
+,Waste,Average,2019,3061
