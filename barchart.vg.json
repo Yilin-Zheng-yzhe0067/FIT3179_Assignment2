@@ -6,7 +6,7 @@
     "projection": { "type": "identity", "reflectY": true },
     "params": [{
         "name": "Continent_selection",
-        "bind": { "input": "select", "options": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "labels": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "name": "States: " }
+        "bind": { "input": "select", "options": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "labels": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "name": "State: " }
     }],
     "layer": [{
             "data": { "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/barchart.csv" },
