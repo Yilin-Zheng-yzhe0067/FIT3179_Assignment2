@@ -9,7 +9,9 @@
         "type": "line",
         "point": true
     },
-    "params": [{ "name": "City_selection", "bind": { "input": "select", "options": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "labels": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "name": "City: " } }],
+    "params": [{ "name": "City_selection", "bind": { "input": "select", "options": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "labels": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "name": "City: " } },
+        { "name": "continent_highlight", "select": { "type": "point", "fields": ["City"] }, "bind": "legend" }
+    ],
     "transform": [{
         "filter": "datum.City == City_selection || datum.City == 'Average'"
     }],
@@ -49,6 +51,7 @@
             { "field": "Year", "type": "nominal" },
             { "field": "City", "type": "nominal" },
             { "field": "pm", "type": "quantitative", "title": "PM2.5" }
-        ]
+        ],
+        "opacity": { "condition": { "param": "continent_highlight", "value": 1 }, "value": 0.6 }
     }
 }

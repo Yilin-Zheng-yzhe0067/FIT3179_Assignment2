@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Greenhouse Gas Categories",
-    "width": 400,
+    "title": "Greenhouse Gas Categories",
+    "width": 430,
     "height": 200,
     "data": {
         "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/piechart.csv"
