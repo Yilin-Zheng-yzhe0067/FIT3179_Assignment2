@@ -4,7 +4,7 @@
     "width": 400,
     "height": 200,
     "data": {
-        "url": "piechart.csv"
+        "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/piechart.csv"
     },
     "params": [{ "name": "continent_highlight", "select": { "type": "point", "fields": ["Greenhouse Gas Categories"] }, "bind": "legend" }],
     "mark": { "type": "arc", "tooltip": true, "innerRadius": 50 },
@@ -35,5 +35,10 @@
             { "field": "C02 Emission in 2019", "type": "quantitative" },
             { "field": "Percentage of Total C02 Emission", "type": "nominal" }
         ]
+    },
+    "config": {
+        "view": {
+            "stroke": "transparent"
+        }
     }
 }

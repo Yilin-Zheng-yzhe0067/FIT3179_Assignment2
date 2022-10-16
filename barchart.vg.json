@@ -1,49 +1,112 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": { "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/barchart.csv" },
+    "title": "Greenhouse Gas Emission by State",
     "width": 400,
     "height": 300,
-    "mark": "bar",
-    "params": [{ "name": "Continent_selection", "bind": { "input": "select", "options": [null, "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "labels": ["Australia", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "name": "States: " } }],
-    "transform": [{
-        "filter": "Continent_selection == null || datum.State == Continent_selection"
+    "projection": { "type": "identity", "reflectY": true },
+    "params": [{
+        "name": "Continent_selection",
+        "bind": { "input": "select", "options": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "labels": ["Average", "NSW", "QLD", "VIC", "WA", "SA", "NT", "TAS", "ACT"], "name": "States: " }
     }],
-    "encoding": {
-        "x": {
-            "field": "Year",
-            "type": "nominal",
-            "axis": { "labelAngle": 0 }
-        },
-        "y": {
-            "field": "CO2 Emission",
-            "type": "quantitative"
-        },
-        "color": {
-            "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ",
-            "legend": { "title": "CO2 Emission Source" },
-            "type": "nominal",
-            "scale": {
-                "domain": [
-                    "Agriculture",
-                    "Energy",
-                    "Industrial Processes",
-                    "Waste"
+    "layer": [{
+            "data": { "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/barchart.csv" },
+            "mark": "bar",
+            "transform": [{
+                "filter": "Continent_selection == null || datum.State == Continent_selection"
+            }],
+
+            "encoding": {
+
+                "x": {
+                    "field": "Year",
+                    "type": "nominal",
+                    "axis": { "labelAngle": 0, "domain": false, "grid": false, "ticks": true }
+                },
+                "y": {
+                    "field": "CO2 Emission",
+                    "type": "quantitative",
+                    "axis": {
+                        "domain": false,
+                        "grid": false,
+                        "ticks": true,
+                        "labelOverlap": true
+                    }
+                },
+                "color": {
+                    "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ",
+                    "legend": { "title": "CO2 Emission Source" },
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "Agriculture",
+                            "Energy",
+                            "Industrial Processes",
+                            "Waste"
+                        ],
+                        "range": [
+                            "#8dd3c7",
+                            "#386cb0",
+                            "#bebada",
+                            "#fb8072"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    { "field": "Year", "type": "nominal" },
+                    { "field": "CO2 Emission", "type": "quantitative", "title": "C02 Emission" },
+                    { "field": "State", "type": "nominal" },
+                    { "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ", "type": "nominal", "title": "CO2 Emission Source" }
                 ],
-                "range": [
-                    "#8dd3c7",
-                    "#386cb0",
-                    "#bebada",
-                    "#fb8072"
-                ]
+                "opacity": { "condition": { "test": "Continent_selection != null" }, "value": 0 }
             }
-
-
         },
-        "tooltip": [
-            { "field": "Year", "type": "nominal" },
-            { "field": "CO2 Emission", "type": "quantitative", "title": "C02 Emission" },
-            { "field": "State", "type": "nominal" },
-            { "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ", "type": "nominal", "title": "CO2 Emission Source" }
-        ]
+        {
+            "data": { "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/barchart.csv" },
+            "mark": "bar",
+            "transform": [{
+                "filter": "datum.State == 'Average'"
+            }],
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "nominal",
+                    "axis": { "labelAngle": 0, "domain": false, "grid": false, "ticks": true }
+                },
+                "y": {
+                    "field": "CO2 Emission",
+                    "type": "quantitative",
+                    "axis": null
+                },
+                "color": {
+                    "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ",
+                    "legend": { "title": "CO2 Emission Source" },
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "Agriculture",
+                            "Energy",
+                            "Industrial Processes",
+                            "Waste"
+                        ],
+                        "range": [
+                            "#8dd3c7",
+                            "#386cb0",
+                            "#bebada",
+                            "#fb8072"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    { "field": "Year", "type": "nominal" },
+                    { "field": "CO2 Emission", "type": "quantitative", "title": "C02 Emission" },
+                    { "field": "State", "type": "nominal" },
+                    { "field": "GREENHOUSE GAS SOURCE AND SINK CATEGORIES ", "type": "nominal", "title": "CO2 Emission Source" }
+                ],
+                "opacity": { "condition": { "test": "Continent_selection == null" }, "value": 0 }
+            }
+        }
+    ],
+    "resolve": {
+        "scale": { "y": "independent" }
     }
 }

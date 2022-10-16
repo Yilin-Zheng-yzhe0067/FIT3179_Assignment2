@@ -1,20 +1,21 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "PM2.5 vs Year",
+    "title": "PM2.5 vs Year",
     "data": { "url": "https://raw.githubusercontent.com/Yilin-Zheng-yzhe0067/FIT3179_Assignment2/main/data/pmvalue.csv" },
     "width": 400,
-    "height": 200,
+    "height": 250,
     "mark": {
         "type": "line",
         "point": true
     },
-    "params": [{ "name": "City_selection", "bind": { "input": "select", "options": [null, "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "labels": ["Show All", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "name": "City: " } }],
+    "params": [{ "name": "City_selection", "bind": { "input": "select", "options": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "labels": ["Average", "Adelaide", "Brisbane", "Canberra", "Darwin", "Hobart", "Melbourne", "Perth", "Sydney"], "name": "City: " } }],
     "transform": [{
-        "filter": "City_selection == null || datum.City == City_selection"
+        "filter": "datum.City == City_selection || datum.City == 'Average'"
     }],
     "encoding": {
-        "x": { "field": "Year", "type": "nominal", "axis": { "labelAngle": 0 } },
-        "y": { "field": "pm", "type": "quantitative", "title": "PM2.5(µg/m^3)" },
+        "x": { "field": "Year", "type": "nominal", "axis": { "labelAngle": 0, "domain": false, "grid": false, "ticks": true } },
+        "y": { "field": "pm", "type": "quantitative", "title": "PM2.5(µg/m^3)", "axis": { "domain": false, "grid": false, "ticks": true } },
         "color": {
             "field": "City",
             "type": "nominal",
@@ -27,7 +28,8 @@
                     "Hobart",
                     "Melbourne",
                     "Perth",
-                    "Sydney"
+                    "Sydney",
+                    "Average"
                 ],
                 "range": [
                     "#1b9e77",
@@ -37,10 +39,16 @@
                     "#66a61e",
                     "#e6ab02",
                     "#a6761d",
-                    "#666666"
+                    "#666666",
+                    "#d3d3d3"
                 ]
             }
 
-        }
+        },
+        "tooltip": [
+            { "field": "Year", "type": "nominal" },
+            { "field": "City", "type": "nominal" },
+            { "field": "pm", "type": "quantitative", "title": "PM2.5" }
+        ]
     }
 }
